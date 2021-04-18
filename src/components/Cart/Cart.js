@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = (props) => {
@@ -34,6 +35,10 @@ const Cart = (props) => {
             <p>Shipping: {formatNumber(shipping)}</p>
             <p>VAT: {formatNumber(tax)}</p>
             <p>Total Price: {formatNumber(grandTotal)}</p>
+            
+            <NavLink to="/review">
+                <button className="main-button">Review Order</button>
+            </NavLink>
         </div>
     );
 };
