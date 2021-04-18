@@ -11,6 +11,7 @@ import {
   Link
 } from "react-router-dom";
 import NotFound from './components/NoFound/NotFound';
+import ProductDetail from './components/ProductDetail/ProductDetail';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
           	</Route>
             <Route exact path="/">
               <Shop></Shop>
+            </Route>
+            <Route path="/product/:productKey">
+                <ProductDetail></ProductDetail>
             </Route>
             <Route path="*">
               <NotFound></NotFound>
